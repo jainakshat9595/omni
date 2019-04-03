@@ -10,7 +10,8 @@ body {
     width: 640px;
     height: 640px;
     top: 145px;
-    left: 305px;
+    left: 32%;
+    transform: translate(-50%);
 }
 
 .slick-prev:before, .slick-next:before { 
@@ -69,4 +70,120 @@ body {
 
 .main-content-item[data-index="7"] {
     background-image: url(../images/main-slider/full/7.png);
+}
+
+.hotpoint-outer {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    padding: 0;
+    box-sizing: content-box;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    color: #2222AA;
+}
+
+.hotpoint-inner {
+    padding: 3px;
+    box-shadow: #afafaf 0 0 6px 4px;
+    box-sizing: content-box;
+    cursor: pointer;
+    font-weight: normal;
+    border-radius: 100%;
+    -webkit-animation: hotpoint_inner_anim 1.5s infinite alternate;
+    -moz-animation: hotpoint_inner_anim 1.5s infinite alternate;
+    animation: hotpoint_inner_anim 1.5s infinite alternate;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hotpoint-inner i {
+    background-color: #afafaf;
+    border-radius: 100%;
+    padding: 2px;
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    height: 36px;
+    width: 36px;
+    text-align: center;
+}
+
+.hotpoint-inner i:before {
+    content: "i";
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+    color: #fff;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.hotpoint-outer[data-index="4"] .hotpoint-inner i:before {
+    font-size: 22px;
+    content: '\25ba';
+    margin-left: 2px;
+    margin-top: 1px;
+}
+
+@-webkit-keyframes hotpoint_inner_anim {
+    from {
+        box-shadow: #afafaf 0 0 6px 4px;
+    }
+
+    to {
+        box-shadow: rgba(175, 175, 175, 0) 0 0 6px 4px;
+    }
+}
+
+@-moz-keyframes hotpoint_inner_anim {
+    from {
+        box-shadow: #afafaf 0 0 6px 4px;
+    }
+
+    to {
+        box-shadow: rgba(175, 175, 175, 0) 0 0 6px 4px;
+    }
+}
+
+@keyframes hotpoint_inner_anim {
+    from {
+        box-shadow: #afafaf 0 0 6px 4px;
+    }
+
+    to {
+        box-shadow: rgba(175, 175, 175, 0) 0 0 6px 4px;
+    }
+}
+
+.hotpoint-outer:hover {
+    background-color: transparent;
+    border: none;
+}
+
+.hotpoint-outer:hover .hotpoint-inner {
+    animation: none;
+    box-shadow: black 0 0 6px 4px;
+}
+
+.hotpoint-outer:hover .hotpoint-inner i {
+    background-color: #000;
+}
+
+#omni-video {
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
