@@ -5,19 +5,28 @@ $(document).ready(function(){
         $(`.main-content-item[data-index="${index}"]`).show();
     }
 
+    const markActiveItemByIndex = (index) => {
+        $('.main-slider-item').removeClass('active');
+        $(`.main-slider-item[data-index="${index}"]`).addClass('active');
+    }
+
     $('.main-slider').slick({
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 3,
-        arrows: true,
+        arrows: true
     });
 
     showMainContentByIndex(1);
 
     $('.main-slider .main-slider-item img').mouseenter((e) => {
-        let indexToShow = $(e.target).data('index');
+        let indexToShow = $(e.target).parent().data('index');
+        markActiveItemByIndex(indexToShow);
+        showMainContentByIndex(indexToShow);
         if(indexToShow !== 8 && indexToShow !== '8') {
-            showMainContentByIndex(indexToShow);
+            document.getElementById('omni-video-main').load();
+        } else {
+            document.getElementById('omni-video-main').play();
         }
     });
 
