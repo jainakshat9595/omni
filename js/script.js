@@ -34,7 +34,8 @@ $(document).ready(function(){
         items: {
           src: 'images/main-slider/full/2.jpg'
         },
-        type: 'image'
+        type: 'image',
+        mainClass: 'my-lighbox'
     });
 
     $('.hotpoint-outer[data-index="2"]').magnificPopup({
