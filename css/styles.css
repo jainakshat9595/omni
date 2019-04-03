@@ -1,3 +1,11 @@
+@font-face {
+	font-family: "walmart-icons7Gz945DY_2";
+	src: url("//a.sellpoint.net/w/fonts/WalmartIcons-normal.eot?v=1.0.0&w=7Gz945DY_2");
+	src: url("//a.sellpoint.net/w/fonts/WalmartIcons-normal.eot?#iefix&v=1.0.0&w=7Gz945DY_2") format("embedded-opentype"), url("//a.sellpoint.net/w/fonts/WalmartIcons-normal.woff2?v=1.0.0&w=7Gz945DY_2") format("woff2"), url("//a.sellpoint.net/w/fonts/WalmartIcons-normal.woff?v=1.0.0&w=7Gz945DY_2") format("woff"), url("//a.sellpoint.net/w/fonts/WalmartIcons-normal.ttf?v=1.0.0&w=7Gz945DY_2") format("truetype"), url("//a.sellpoint.net/w/fonts/WalmartIcons-normal.svg?v=1.0.0&w=7Gz945DY_2#wamlartregular") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body {
     background-image: url(../images/imgpsh_fullsize_anim.png);
     background-repeat: no-repeat;
@@ -117,20 +125,19 @@ body {
 }
 
 .hotpoint-inner i:before {
-    content: "i";
+    content: "\e802";
     display: inline-block;
     height: 36px;
     width: 36px;
     color: #fff;
     font-size: 36px;
     line-height: 36px;
+    font-family: "walmart-icons7Gz945DY_2";
+    font-style: normal;
 }
 
 .hotpoint-outer[data-index="4"] .hotpoint-inner i:before {
-    font-size: 22px;
-    content: '\25ba';
-    margin-left: 2px;
-    margin-top: 1px;
+    content: '\e801';
 }
 
 @-webkit-keyframes hotpoint_inner_anim {
