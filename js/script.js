@@ -35,7 +35,7 @@ $(document).ready(function(){
           src: 'images/main-slider/full/2.jpg'
         },
         type: 'image',
-        mainClass: 'my-lighbox'
+        mainClass: 'my-lightbox'
     });
 
     $('.hotpoint-outer[data-index="2"]').magnificPopup({
@@ -50,7 +50,8 @@ $(document).ready(function(){
         gallery: {
             enabled: true
         },
-        type: 'image'
+        type: 'image',
+        mainClass: 'my-lightbox'
     });
 
     $('.hotpoint-outer[data-index="3"]').magnificPopup({
@@ -68,21 +69,24 @@ $(document).ready(function(){
         gallery: {
             enabled: true
         },
-        type: 'image'
+        type: 'image',
+        mainClass: 'my-lightbox'
     });
 
     $('.hotpoint-outer[data-index="5"]').magnificPopup({
         items: {
           src: 'images/main-slider/full/3.jpg'
         },
-        type: 'image'
+        type: 'image',
+        mainClass: 'my-lightbox'
     });
 
     $('.hotpoint-outer[data-index="6"]').magnificPopup({
         items: {
           src: 'images/main-slider/full/5.gif'
         },
-        type: 'image'
+        type: 'image',
+        mainClass: 'my-lightbox'
     });
 
     $('.hotpoint-outer[data-index="4"]').magnificPopup({
@@ -94,6 +98,7 @@ $(document).ready(function(){
             `,
         },
         type: 'inline',
+        mainClass: 'my-lightbox',
         callbacks: {
             open: function() {
                 $('html').css('margin-right', 0);
